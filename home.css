@@ -1,0 +1,40 @@
+
+
+header{
+    width= 90%;
+    height: 80px;
+    border: 2px solid black;
+}
+
+#logo{
+    display: inline;
+    width: 150px;
+    float: left;
+    border: 2px solid black;
+}
+
+#logo img{
+    height: 100%;
+    float: left;
+}
+
+#searchbar{
+    display: inline;
+    height: 100%;
+    border: 2px solid black;
+    float: right;
+}
+
+/*
+#searchbar input img{
+    float: right;
+}
+*/
+
+
+#user{
+    display: inline;
+    height: 100%;
+    border: 2px solid black;
+    float: right;
+}
