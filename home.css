@@ -1,50 +1,140 @@
+:root {
+    --normal-font-color : rgba(160, 160, 160, 1);;
+    --onhover-font-color : white;
+    --menu-bg : rgba(10, 10, 10, 1);
+    --menu-bg-hover : rgba(40, 40, 40, 1);;
+    
+}
 
+#example {
+  background-color: var(--main-bg-color);
+}
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+	background: rgb(42,42,42);
+	background: linear-gradient(0deg, rgba(42,42,42,1) 0%, rgba(0,0,0,1) 95%, rgba(0,0,0,1) 100%);
+    color: var(--normal-font-color);
+}
 
 header{
-    width= 90%;
-    height: 80px;
-    border: 2px solid black;
+    background: rgb(42,42,42);
+	background: linear-gradient(0deg, rgba(42,42,42,1) 0%, rgba(0,0,0,1) 95%, rgba(0,0,0,1) 100%);
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    z-index: 1;
 }
 
 #logo{
     display: inline;
     width: 150px;
     float: left;
-    border: 2px solid black;
 }
 
 #logo img{
-    height: 100%;
+    text-align: center;
+    height: 80%;
     float: left;
 }
 
-#searchbar{
-    display: inline;
+.fas {
+    text-align: center;
+    color : white;
+    margin: auto;
+}
+
+.fa-user{
+    text-align: center;
+    border-radius: 50px;
+    font-size : 30px;
+    margin: 10px;
+}
+
+.fa-search{
+    font-size: 15px;
+    float: right;
+    position: relative;
+    top: 25%;
+    right: 25px;
+    color: black;
+    z-index: 1;
+}
+
+.fa-search:hover{
+    color: cornflowerblue;
+}
+
+.fa-user:hover {
+    background-color: var(--menu-bg-hover);
+}
+
+.user-dropdown{
+    display: none;
+    text-align: right;
+}
+
+.user-dropdown a{
+    display: block;
+    text-decoration: none;
+    background-color: var(--menu-bg);
+    color: var(--normal-font-color);
+    text-align: center;
+    padding: 8px;
+    width 100%;
+}
+
+.user-dropdown a:hover {
+    background-color: var(--menu-bg-hover);
+    color: var(--onhover-font-color);
+}
+
+#user:hover .user-dropdown {
+    display: block;
+    color: red;
+}
+
+#user{
+    display: block;
     height: 100%;
-    border: 2px solid black;
+    width: 75px;
     float: right;
 }
 
-
-
-#user{
-    display: inline;
+#search-container{
     height: 100%;
-    border: 2px solid black;
+    display: inline-block;
     float: right;
+}
+
+input[type=text] {
+    position: relative;
+    top: 20%;
+  	float: right;
+    height: auto;
+    margin: auto;
+    font-size: 15px;
+    border-radius: 20px;
 }
 
 #main-container{
-    width: 100%;
+    position: relative;
+    top: 70px;
+    height: auto;
+    border: 2px solid black;
+}
+
+#sidebar{
+    display: inline-block;
+    width: 20%;
     height: 100%;
     border: 2px solid black;
 }
 
-
-#sidebar{
-    width: 20%;
-    height: 100%;
-    border: 2px solid black;
+#app-body{
+    display: inline-block;
+    width: 70%;
 }
 
 #option-container{
@@ -59,4 +149,10 @@ header{
 
 #player{
     
+}
+
+
+#searchbar{
+    height: auto;
+    border-radius: 15px;
 }

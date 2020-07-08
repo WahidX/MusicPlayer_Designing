@@ -1,38 +1,32 @@
 <html>
 <head>
     <title>Rough</title>
-    
-    <style type="text/css">
-        #header-container{
-            border: 2px solid blue;
-            height: 50px;
-            width: auto;
-        }
-        
-        #logo{
-            display: inline;
-            border: 2px solid blue;
-            height: 50px;
-            width: 50px;
-        }
-    
-    </style>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
 </head>
-
-<body>
-    <header>
-    <div id="header-container">
-        
-        <div id="logo">
-            <img src="Spotify-logo.webp">
-        </div>
-        
-        
-    </div>
-    </header>
     
+<body>
 
-X Body
+   
+        
+    <br><br>
+    <button id="fetchBtn" onclick="fetch()">Fetch</button>
+	<p id='image'></p>
+    
+    <script>	
+		var img = document.getElementById("image");
+		var listOfBreeds = 'https://dog.ceo/api/breeds/list/all';
+		var randomDog = 'https://dog.ceo/api/breeds/image/random';
+
+		function fetch() {
+			$.ajax({
+				url : randomDog,
+				method : 'get',
+				success : function(data){
+					console.log(data);
+					img.innerHTML = '<img src='+data.message+'>';
+				}
+			});
+		}
+    </script>
 </body>
 </html>

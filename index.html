@@ -4,16 +4,25 @@
             Music Player X
         </title>
         <link rel="stylesheet" type="text/css" href="./home.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
     </head>
 
     <body>
         <header>
-            <div id="logo"><img src="static/Spotify-logo.webp"></div>
-            <div id="user">user <br> With <br> Menu</div>
-            <div id="searchbar">
-                <input type="type">
-                <img src="static/search-button.png" width=30px>
-            </div>
+            <div id="logo"><img src="static/logo.png"></div>
+		        <div id="user">
+                    <i class="fas fa-user"></i>
+                    <div class="user-dropdown">
+                        <a href="#">Account</a>
+                        <a href="#">Settings</a>
+                        <a href="#">Logout</a>
+                    </div>
+                    
+                </div>
+                <div id="search-container">
+                    <i class="fas fa-search"></i>
+                    <input id="searchinput" type="text" placeholder="Search...">
+                </div>
         </header>
         
         <div id="main-container">
