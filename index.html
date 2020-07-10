@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <title>
             Music Player X
@@ -26,30 +27,64 @@
         </header>
         
         <div id="main-container">
-        <nav id="sidebar">
-            <div id="option-container">
-                <a href="#"><div class="options">op1</div></a>
-                <a href="#"><div class="options">op2</div></a>
-                <a href="#"><div class="options">op3</div></a>
+            <nav id="sidebar">
+                <div id="option-container">
+                    <a href="#"><div class="options">op1</div></a>
+                    <a href="#"><div class="options">op2</div></a>
+                    <a href="#"><div class="options">op3</div></a>
+                </div>
+
+                <h2>Queue</h2>
+                <div id="queue-container">
+                    <a href="#"><div class="queue">song1</div></a>
+                    <a href="#"><div class="queue">song2</div></a>
+                    <a href="#"><div class="queue">song3</div></a>
+                    <a href="#"><div class="queue">song4</div></a>
+                </div>
+            </nav>
+
+            <div id="app-body">
+                App Body
             </div>
-            
-            <h2>Queue</h2>
-            <div id="queue-container">
-                <a href="#"><div class="queue">song1</div></a>
-                <a href="#"><div class="queue">song2</div></a>
-                <a href="#"><div class="queue">song3</div></a>
-                <a href="#"><div class="queue">song4</div></a>
-            
-            </div>
-            
-        </nav>
-        
         
         </div>
         
-        <footer id="player">
-            player
+        
+        
+        <footer id="player-container">
+            <div class="song-container">
+                <img class="small-albumart" src="static/nirvana_albumart.jpg">
+                <div class="song-details">
+                    <p class="song-name">
+                        SONG NAME
+                        <i class="far fa-heart"></i>
+                    </p>
+                    <p class="artist-name">Nirvana</p>
+                    <p class="album-name">AlbumName</p>
+                </div>
+            </div>
+            <div id="control-container">
+                <div id="control-buttons">
+                    <i class="fas fa-random"></i>
+                    <i class="fas fa-step-backward"></i>
+                    <i class="fas fa-play"></i>
+                    <i class="fas fa-step-forward"></i>
+                    <i class="fas fa-redo-alt"></i>
+                </div>
+                <div id="time-slider">
+                    <input type="range" id="time">
+                </div>
+            </div>
+            
+            <div id="vol-control-container">
+                <i class="fas fa-list-ul"></i>
+                <i class="fas fa-desktop"></i>
+                <i class="fas fa-volume-down"></i>
+                <input type="range" id="time">
+            </div>
+            
         </footer>
+        
     </body>
 
 
