@@ -6,6 +6,27 @@
     
 }
 
+/*Scrollbar*/
+/*For FireFox*/
+* {
+  scrollbar-width: thin;
+  scrollbar-color: blue orange;
+}
+
+/*For Chrome/Safari/Edge*/
+*::-webkit-scrollbar {
+  width: 10px;
+}
+*::-webkit-scrollbar-track {
+  background: inherit;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(83, 83, 83, 1);
+}
+*::-webkit-scrollbar-thumb:active{
+    background-color: rgba(100, 100, 100, 1);
+}
+
 html{
     font-size: 16px;
 }
@@ -163,10 +184,16 @@ input[type=text] {
 #option-container *:hover{
     color: white;
 }
+
+
 /*QUEUE*/
 #queue-container {
     display: flex;
-    flex-direction: column;  
+    flex-direction: column;
+    height: 580px;;
+    overflow:hidden;
+    overflow-y:scroll;
+    padding-right: 10px;
 }
 
 .queue-song-container {
@@ -228,7 +255,6 @@ input[type=text] {
     width: 100%;
     height: 110px;
     bottom: 0px;
-    border: 1px red solid;
     justify-content: space-between
 }
 
