@@ -2,7 +2,8 @@
     --normal-font-color : rgba(160, 160, 160, 1);;
     --onhover-font-color : white;
     --menu-bg : rgba(10, 10, 10, 1);
-    --menu-bg-hover : rgba(40, 40, 40, 1);;
+    --menu-bg-hover : rgba(40, 40, 40, 1);
+    --footer-bg : rgba(40, 40, 40, 1);
     
 }
 
@@ -10,7 +11,11 @@
 /*For FireFox*/
 * {
   scrollbar-width: thin;
-  scrollbar-color: blue orange;
+  scrollbar-color: rgba(83, 83, 83, 1) var(--footer-bg);
+}
+
+*:active{
+    scrollbar-color: rgba(100, 100, 100, 1) var(--footer-bg);
 }
 
 /*For Chrome/Safari/Edge*/
