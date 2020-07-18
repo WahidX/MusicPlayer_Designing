@@ -416,6 +416,15 @@ label span{
     border-radius: 100%;
 }
 
+a{
+    text-decoration: none;
+    color: var(--normal-font-color);
+}
+
+a:hover {
+    color: var(--onhover-font-color);
+}
+
 .artist-container p {
     text-align: center;
 }
@@ -434,6 +443,9 @@ label span{
     transition: .2s
 }
 
+
+
+/*ROUGH*/
 
 
 
