@@ -14,6 +14,7 @@
     height: 300px;
     right: 0;
     position: relative;
+    margin-bottom: 15px;
 }
 
 #cover-container p {
@@ -23,6 +24,7 @@
 
 #buttons{
     margin-left: 20px;
+    padding-bottom: 10px;
 }
 
 button{
@@ -73,6 +75,7 @@ button{
     color: white;
 }
 
+/*DROPDOWN*/
 .dropdown {
   position: relative;
   display: inline-block;
@@ -101,3 +104,83 @@ button{
 .dropdown:hover .dropdown-content a:hover{
     background-color: var(--menu-bg-hover);
 }
+
+/*TAB-STRUCTURE*/
+.tabs {
+	position: relative;
+    top: 5px;
+    margin: 5px;
+}
+
+.tabs .tab {
+	float: left;
+}
+
+.content {
+	position: absolute;
+    left: 0;
+    width: 75%;
+    display: none;
+}
+
+.tab a{
+    margin-left: 5px;
+    font-size: 25px;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: black;
+}
+
+.tab a:hover{
+    background-color: rgb(30,30,30);
+    color: red;
+}
+
+
+.tab:target a{
+    background-color: rgb(30,30,30);
+    color: red;
+    border-bottom: 5px solid red;
+	font-weight: bold;
+}
+
+.tab:target .content{
+	display: block;
+}
+
+/*TAB-WISE STYLES*/
+.tab .content {
+    background: rgb(20,20,20);
+    background: linear-gradient(135deg, rgba(20,20,20,1) 0%, rgba(28,28,28,1) 22%, rgba(0,0,0,1) 100%);     
+    padding: 0px;
+    margin: 5px;
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: justify;
+}
+
+#tab1 .content {
+    padding: 15px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+#artists{
+    padding-left: 20px;
+}
+
+/*SONGS-TAB*/
+
+#songs-container {
+    display: flex;
+    flex-direction: column;
+    height: 580px;;
+    overflow:hidden;
+    overflow-y:scroll;
+    padding-right: 10px;
+}
+
+.fa-plus{
+    padding-left: 50px;
+}
+
