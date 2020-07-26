@@ -49,13 +49,14 @@ body {
 }
 
 header{
-    top: 0px;
-    background: rgb(42,42,42);
-	background: linear-gradient(0deg, rgba(42,42,42,1) 0%, rgba(0,0,0,1) 95%, rgba(0,0,0,1) 100%);
+    position: relative;
+    top: 0;
+    background: rgba(42,42,42,0.5);
+	background: linear-gradient(0deg, rgba(42,42,42,0.8) 0%, rgba(0,0,0,1) 95%, rgba(0,0,0,0.5) 100%);
     position: fixed;
     width: 100%;
     height: 70px;
-    z-index: 1;
+    z-index: 100;
 }
 
 #logo{
@@ -255,6 +256,7 @@ input[type=text] {
     height: 100%;
     width: 75%;
     min-width: 400px;
+    bottom: 200px;
 }
 
 
@@ -361,11 +363,22 @@ label span{
 
 /*SCROLLABLE VIEWS*/
 
-/*LATEST-RELEASE*/
-.scrollable-view-container {
+/*Sliding Cards For Top Charts n playlist cards*/
+
+
+
+#playlists .scrollable-view-container {
+    flex-wrap: wrap;
+    widows: 300px;
+}
+
+#top-charts .scrollable-view-container{
+    overflow-x: scroll;
+}
+
+.scrollable-view-container{
     display: flex;
     flex-direction: row;
-    overflow-x: scroll;
 }
 
 .item-container{
@@ -374,6 +387,16 @@ label span{
     background-color: rgba(20,20,20,1);
     border-radius: 10px;
 }
+
+#playlists .scrollable-view-container .item-container{
+    width: 200px;
+}
+
+#playlists .scrollable-view-container .item-container img{
+    width: 200px;
+    height: 150px;
+}
+
 
 .item-container img{
     border-radius: 10px;
@@ -413,6 +436,7 @@ label span{
 
 .artist-container img {
     width: 130px;
+    height: 130px;
     border-radius: 100%;
 }
 
@@ -445,7 +469,75 @@ a:hover {
 
 
 
-/*ROUGH*/
+/*RECENTLY PLAYED*/
+#recent {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.recent-item{
+    display: flex;
+    width: 60%;
+    min-width: 200px;
+    max-width: 300px;
+    margin: 10px;
+}
+
+.recent-item:hover{
+    border-left: 2px red solid;
+}
+
+.recent-item img{
+    height: 120px;
+    margin-right: 20px;
+}
+
+.recent-item:hover img{
+    height: 125px;
+    margin-right: 15px;
+}
+
+.desc-container{
+    width: 200px;
+}
+
+.desc-container .name{
+    font-size: 1.2rem;
+    color: var(--normal-font-color);
+}
+
+.desc-container:hover .name{
+    color: var(--onhover-font-color);
+}
+
+.desc-container .desc{
+    color: rgb(100,100,100);
+}
+
+.right-elements{
+    margin-left: 50px;
+}
+
+.card-menu{
+    display: block;
+    position: absolute;
+    z-index: 10;
+    background-color: var(--menu-bg);
+    visibility: hidden;
+}
+
+.card-menu *{
+    padding: 5px;
+}
+
+.card-menu *:hover{
+    background-color: var(--menu-bg-hover);
+    color: var(--onhover-font-color);
+}
+
+.right-elements:hover .card-menu{
+    visibility: visible;
+}
 
 
 
@@ -542,4 +634,8 @@ a:hover {
 #vol-control-container input{
     margin-right: 40px;
     width: 60%;
+}
+
+#footer-support{
+    height: 100px;
 }
